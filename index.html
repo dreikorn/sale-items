@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artículos en venta</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.5;
+  }
+
+  header {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -.02em;
+  }
+
+  header p {
+    color: #666;
+    margin-top: .25rem;
+    font-size: .95rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    transition: box-shadow .2s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+
+  .card-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background: #f0f0f0;
+  }
+
+  .card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .card-body h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+  }
+
+  .card-body .qty {
+    font-size: .8rem;
+    color: #888;
+    margin-bottom: .75rem;
+  }
+
+  .prices {
+    display: flex;
+    align-items: baseline;
+    gap: .5rem;
+    margin-bottom: 1rem;
+  }
+
+  .price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2e7d32;
+  }
+
+  .price.free {
+    color: #888;
+    font-size: 1.1rem;
+  }
+
+  .original {
+    font-size: .9rem;
+    color: #999;
+    text-decoration: line-through;
+  }
+
+  .card-body .link {
+    margin-top: auto;
+    display: inline-block;
+    padding: .5rem 1rem;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: .85rem;
+    text-align: center;
+    transition: background .15s;
+  }
+
+  .card-body .link:hover { background: #444; }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #999;
+    font-size: .85rem;
+  }
+
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+    header { padding: 2rem 1rem 1.5rem; }
+    header h1 { font-size: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Artículos en venta</h1>
+  <p>Precios por unidad — contacto por WhatsApp</p>
+</header>
+
+<main class="grid">
+
+  <div class="card">
+    <img class="card-img" src="img/Baloncesto%20.png" alt="Baloncesto" loading="lazy">
+    <div class="card-body">
+      <h2>Baloncesto</h2>
+      <span class="qty">1 unidad</span>
+      <div class="prices">
+        <span class="price">20&nbsp;€</span>
+        <span class="original">99,99&nbsp;€</span>
+      </div>
+      <a class="link" href="https://www.decathlon.es/es/p/canasta-de-baloncesto-infantil-con-soporte-para-mates-ajustable-hasta-2-20-m-k900/313453/c1c8m8935351" target="_blank" rel="noopener">Ver en Decathlon</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img" src="img/tumbona.jpeg" alt="Tumbona IKEA" loading="lazy">
+    <div class="card-body">
+      <h2>Tumbona IKEA</h2>
+      <span class="qty">2 unidades</span>
+      <div class="prices">
+        <span class="price">50&nbsp;€</span>
+        <span class="original">174&nbsp;€</span>
+      </div>
+      <a class="link" href="https://www.ikea.com/es/es/p/nammaro-tumbona-exterior-tinte-marron-claro-kuddarna-beige-grisaceo-s19575234/#content" target="_blank" rel="noopener">Ver en IKEA</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img" src="img/cojin_tumbona.jpg" alt="Cojín para Tumbona" loading="lazy">
+    <div class="card-body">
+      <h2>Cojín para Tumbona</h2>
+      <span class="qty">2 unidades</span>
+      <div class="prices">
+        <span class="price">10&nbsp;€</span>
+        <span class="original">35&nbsp;€</span>
+      </div>
+      <a class="link" href="https://www.ikea.com/es/es/p/kuddarna-cojin-tumbona-exterior-beige-grisaceo-00547260/" target="_blank" rel="noopener">Ver en IKEA</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img" src="img/Mini%20mesa%20jardin%20Nammaro.jpg" alt="Mini mesa jardín Nammaro" loading="lazy">
+    <div class="card-body">
+      <h2>Mini mesa jardín Nammaro</h2>
+      <span class="qty">1 unidad</span>
+      <div class="prices">
+        <span class="price free">Gratis</span>
+        <span class="original">19,99&nbsp;€</span>
+      </div>
+      <a class="link" href="https://www.ikea.com/es/es/p/nammaro-taburete-exterior-plegable-tinte-marron-claro-70510300/" target="_blank" rel="noopener">Ver en IKEA</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img" src="img/Mesa%20de%204%20(jardin)%20-%20base%20de%20vidirio.jpeg" alt="Mesa de 4 jardín" loading="lazy">
+    <div class="card-body">
+      <h2>Mesa de 4 (jardín) — base de vidrio</h2>
+      <span class="qty">1 unidad</span>
+      <div class="prices">
+        <span class="price free">Gratis</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img" src="img/barbacoa.jpeg" alt="Barbacoa de gas Livoo" loading="lazy">
+    <div class="card-body">
+      <h2>Barbacoa de gas 3 quemadores Livoo</h2>
+      <span class="qty">1 unidad</span>
+      <div class="prices">
+        <span class="price">50&nbsp;€</span>
+        <span class="original">300&nbsp;€</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img" src="img/cool%20bar.jpg" alt="Ketter Cool Bar" loading="lazy">
+    <div class="card-body">
+      <h2>Ketter Cool Bar</h2>
+      <span class="qty">1 unidad</span>
+      <div class="prices">
+        <span class="price">10&nbsp;€</span>
+        <span class="original">69,99&nbsp;€</span>
+      </div>
+      <a class="link" href="https://amzn.eu/d/0g8gGs6S" target="_blank" rel="noopener">Ver en Amazon</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Interesados contactar por WhatsApp
+</footer>
+
+</body>
+</html>
