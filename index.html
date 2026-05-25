@@ -63,6 +63,35 @@
     cursor: pointer;
   }
 
+  .card.sold .card-img {
+    opacity: .4;
+  }
+
+  .card.sold .card-body {
+    opacity: .5;
+  }
+
+  .card.sold {
+    position: relative;
+  }
+
+  .card.sold::after {
+    content: 'VENDIDO';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #c62828;
+    letter-spacing: .15em;
+    border: 3px solid #c62828;
+    padding: .4rem 1.2rem;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
   .card-body {
     padding: 1.25rem;
     display: flex;
@@ -174,7 +203,7 @@
 
 <main class="grid">
 
-  <div class="card">
+  <div class="card sold">
     <img class="card-img" src="img/Baloncesto%20.png" alt="Baloncesto" loading="lazy">
     <div class="card-body">
       <h2>Baloncesto</h2>
@@ -187,7 +216,7 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card sold">
     <img class="card-img" src="img/tumbona.jpeg" alt="Tumbona IKEA" loading="lazy">
     <div class="card-body">
       <h2>Tumbona IKEA</h2>
@@ -201,7 +230,7 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card sold">
     <img class="card-img" src="img/cojin_tumbona.jpg" alt="Cojín para Tumbona" loading="lazy">
     <div class="card-body">
       <h2>Cojín para Tumbona</h2>
@@ -215,16 +244,15 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card sold">
     <img class="card-img" src="img/Mini%20mesa%20jardin%20Nammaro.jpg" alt="Mini mesa jardín Nammaro" loading="lazy">
     <div class="card-body">
       <h2>Mini mesa jardín Nammaro</h2>
-      <span class="qty">1 unidad</span>
+      <span class="qty">Gratis con la compra de las dos tumbonas</span>
       <div class="prices">
         <span class="price free">Gratis</span>
         <span class="original">19,99&nbsp;€</span>
       </div>
-      <a class="link" href="https://www.ikea.com/es/es/p/nammaro-taburete-exterior-plegable-tinte-marron-claro-70510300/" target="_blank" rel="noopener">Ver en IKEA</a>
     </div>
   </div>
 
@@ -251,7 +279,7 @@
     </div>
   </div>
 
-  <div class="card">
+  <div class="card sold">
     <img class="card-img" src="img/cool%20bar.jpg" alt="Ketter Cool Bar" loading="lazy">
     <div class="card-body">
       <h2>Ketter Cool Bar</h2>
