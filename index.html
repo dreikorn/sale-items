@@ -57,8 +57,9 @@
   .card-img {
     width: 100%;
     height: 240px;
-    object-fit: cover;
+    object-fit: contain;
     background: #f0f0f0;
+    cursor: pointer;
   }
 
   .card-body {
@@ -129,6 +130,28 @@
     padding: 2rem 1rem;
     color: #999;
     font-size: .85rem;
+  }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .lightbox.open {
+    display: flex;
+  }
+
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
   }
 
   @media (max-width: 480px) {
@@ -245,6 +268,22 @@
 <footer>
   Interesados contactar por WhatsApp
 </footer>
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+document.querySelectorAll('.card-img').forEach(img => {
+  img.addEventListener('click', () => {
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lb.classList.add('open');
+  });
+});
+</script>
 
 </body>
 </html>
